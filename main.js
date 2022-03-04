@@ -14,10 +14,14 @@ function validerNomPropre(strNomPropre) {
 // Déclaration d'objets
 
 const objMessagesErreur = {
-    prenom : 'Le prénom doit avoir au moins trois caractères et débuter par une majuscule.',
-    nom : 'Le nom doit avoir au moins trois caractères et débuter par une majuscule.',
-    niveauScolaire: 'Le niveau scolaire est requis.',
-    accompagnement: 'Le niveau d\'accompagnement est requis.'
+    prenom : 'Erreurs : champ vide, JoBlo89',
+    nom : 'Erreurs : champ vide, JoBlo89',
+    adresse: 'Erreurs : chaines comportant des caractères dangereux comme " < %',
+    ville: 'Erreurs : chaines comportant des caractères dangereux comme " < %',
+    codePostal: 'Erreurs : G1R1B7 %',
+    courriel: 'Erreurs : champ vide, joblo',
+    telephoneCh1: 'Erreurs : champ vide, 90qwe, 6879'
+    telephoneCh1: 'Erreurs : champ vide, 90qwe, 687-9090, 4186879090   '
 };
 
 const jeu = {
