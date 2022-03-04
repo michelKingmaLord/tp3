@@ -23,7 +23,7 @@
         </picture>
     </header>
     <main>
-        <section class="">
+        <section class="introduction">
             <!-- Banderole -->
             <div class="titre_concours">
                 <h1 class="titre_concours_h1" id="concours_h1">Concours</h1>
@@ -48,22 +48,22 @@
                 <fieldset id="formulaire">
                     <legend><h2> Coupon de participation </h2></legend>
 
-                    <fieldset id="formulaire--nom_complet">
-                        <legend id="formulaire--nom_complet--legend">Nom complet</legend>
+                    <fieldset id="form--nom_complet">
+                        <legend id="form--nom_complet--legend">Nom complet</legend>
 
-                        <div class="formulaire--nom_complet--prenom">
+                        <div class="form--nom_complet--prenom">
                             <label for="prenom"
-                                class="formulaire--nom_complet--prenom--label">Prénom</label>
+                                class="form--nom_complet--prenom--label">Prénom</label>
                             <input type="text" placeholder=""
-                                class="formulaire--nom_complet--prenom--input" name="prenom"
-                                id="formulaire--nom_complet--prenom--input" required>
+                                class="form--nom_complet--prenom--input" name="prenom"
+                                id="prenom" required>
                         </div>
 
-                        <div class="formulaire--nom_complet--nom">
+                        <div class="form--nom_complet--nom">
                             <label for="nom"
-                                class="formulaire--nom_complet--nom--label">Nom</label>
+                                class="form--nom_complet--nom--label">Nom</label>
                             <input type="text" placeholder=""
-                                class="formulaire--nom_complet--nom--input" name="nom" id="ormulaire--nom_complet--nom--input"
+                                class="form--nom_complet--nom--input" name="nom" id="form--nom_complet--nom--input"
                                 required>
                         </div>
 
@@ -73,55 +73,53 @@
                     </fieldset>
 
                     <!-- Section entre les fieldsets -->
-                    <div class="contenu_text_adresse>
-                        <label for=" adresse" class="contenu_text_adresse--label">Adresse</label>
-                        <input type="number" placeholder="" class="contenu_text_adresse--input" name="adresse"
-                            id="adresse" required>
-                    </div>
-
-                    <div class="">
-                        <p id="message_erreur">*** À Coder en Javascript! Message d'erreur (2 possibilités)</p>
-                    </div>
+                    <div class="contenu_text_adresse">
+                        <p>
+                            <label for=" adresse" class="contenu_text_adresse--label">Adresse</label>
+                            <input type="number" placeholder="" class="contenu_text_adresse--input" name="adresse"
+                                id="adresse" required>
+                        </p>
+                        <p id="message_erreurAdresse">*** À Coder en Javascript! Message d'erreur (2 possibilités)</p>
+                                            </div>
 
                     <div class="contenu_text__ville">
-                        <label for="ville" class="contenu_text__ville--label">Ville</label>
-                        <input type="text" class="contenu_text__ville--input" name="ville" id="ville" required>
-                    </div>
-
-                    <div class="">
-                        <p id="message_erreur">*** À Coder en Javascript! Message d'erreur (2 possibilités)</p>
+                        <p>
+                            <label for="ville" class="contenu_text__ville--label">Ville</label>
+                            <input type="text" class="contenu_text__ville--input" name="ville" id="ville" required>
+                        </p>
+                
+                        <p id="message_erreurVille">*** À Coder en Javascript! Message d'erreur (2 possibilités)</p>
                     </div>
 
 
                     <div class="contenu_text__pays">
-                        <label for="pays" class="contenu_text__pays--label">Pays</label>
-                        <select class="contenu_text__pays--select" name="pays" id="pays" required>
-                            <option disabled="null" selected="null">province ou état</option>
-                            <option value="QC" id="pays-0">Québec</option>
-                            <option value="ON" id="pays-1">Ontario</option>
-                            <option value="AB" id="pays-2">Alberta</option>
-                            <option value="NB" id="pays-3">Nouveau-Brunswick</option>
-                            <option value="N.É." id="pays-4">Nouvelle-Écosse</option>
-                            <option value="MA" id="pays-5">Manitoba</option>
-                            <option value="IPE" id="pays-6">Île du Prince Edouard</option>
-                            <option value="NV" id="pays-7">Nunavut</option>
-                            <option value="YK" id="pays-8">Yukon</option>
-                        </select>
-                    </div>
-
-                    <div class="">
+                        <p>
+                            <label for="pays" class="contenu_text__pays--label">Pays</label>
+                            <select class="contenu_text__pays--select" name="pays" id="pays" required>
+                                <option disabled="null" selected="null">province ou état</option>
+                                <option value="QC" id="pays-0">Québec</option>
+                                <option value="ON" id="pays-1">Ontario</option>
+                                <option value="AB" id="pays-2">Alberta</option>
+                                <option value="NB" id="pays-3">Nouveau-Brunswick</option>
+                                <option value="N.É." id="pays-4">Nouvelle-Écosse</option>
+                                <option value="MA" id="pays-5">Manitoba</option>
+                                <option value="IPE" id="pays-6">Île du Prince Edouard</option>
+                                <option value="NV" id="pays-7">Nunavut</option>
+                                <option value="YK" id="pays-8">Yukon</option>
+                            </select>
+                        </p>
                         <p id="message_erreur">*** À Coder en Javascript! Message d'erreur (1 possibilité)</p>
-                    </div>
 
+                    </div>
 
                     <div class="contenu_text__code-postal">
-                        <label for="code-postal" class="contenu_text__code-postal--label">Code Postal</label>
-                        <input type="text" class="contenu_text__code-postal--input" name="code-postal" id="code-postal"
-                            required>
-                    </div>
-
-                    <div class="">
+                        <p>
+                            <label for="code-postal" class="contenu_text__code-postal--label">Code Postal</label>
+                            <input type="text" class="contenu_text__code-postal--input" name="code-postal" id="code-postal"
+                                required>    
+                        </p>
                         <p id="message_erreur">*** À Coder en Javascript! Message d'erreur (2 possibilités)</p>
+                        
                     </div>
 
 
