@@ -258,19 +258,34 @@
                                 <li>
                                     <input name="monument_mausolee" id="monument_mausolee-0" value="chateau_dif"
                                         type="radio">
-                                    <img src="./images/chateaudIf-small.jpg" alt="Le château d'If">
+                                        <picture class="picture__chateaudIf">
+                                            <source srcset="images/chateaudIf-small.jpg" media="(max-width:600px)">
+                                            <source srcset="images/chateaudIf.jpg" media="(min-width:601px)">
+                                            <img class="picture__img" src="images/chateaudIf.jpg" alt="Le château d'If">
+                                        </picture>
+                                      
                                     <label for="If">Le château d'If</label>
                                 </li>
                                 <li>
                                     <input name="monument_mausolee" id="monument_mausolee-1" value="palais_lux"
                                         type="radio">
-                                    <img src="./images/palaisluxembourg-small.jpg" alt="Le palais du Luxembourg">
+                                        <picture class="picture__palaisLux">
+                                            <source srcset="images/palaisluxembourg-small.jpg" media="(max-width:600px)">
+                                            <source srcset="images/palaisluxembourg.jpg" media="(min-width:601px)">
+                                            <img class="picture__img" src="images/palaisluxembourg.jpg" alt="Le palais du Luxembourg">
+                                        </picture>
+
                                     <label for="Luxembourg">Le palais du Luxembourg</label>
                                 </li>
                                 <li>
                                     <input name="monument_mausolee" id="monument_mausolee-2" value="taj_mahal"
                                         type="radio">
-                                    <img src="./images/tajmahal-small.jpg" alt="Le Taf Mahal">
+                                        <picture class="picture__palaisLux">
+                                            <source srcset="images/tajmahal-small.jpg" media="(max-width:600px)">
+                                            <source srcset="images/tajmahal.jpg" media="(min-width:601px)">
+                                            <img class="picture__img" src="images/tajmahal.jpg" alt="Le Taf Mahal">
+                                        </picture>
+
                                     <label for="taj_Mahal">Le Taj Mahal</label>
                                 </li>
 
