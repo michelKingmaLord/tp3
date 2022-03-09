@@ -3,27 +3,29 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Travail TP 3">
+    <meta name="description" content="Concours pour Voyager">
     <meta name="keywords" content="tp3">
     <meta name="michel kingma lord" content="Michel Kingma-Lord">
-    <title>TP3 - Formulaire accessible</title>
-    <link rel="icon" href="/favicon.ico" />
-    <link href="/css/styles.css" rel="stylesheet">
+    <title>Concours un Voyage de rêve - TP3</title>
+    <link href="/cour11/tp3-sources-depart/css/styles.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="icon" href="/cour11/tp3-sources-depart/favicon.ico" />
 </head>
 
-<body id="body" role="body">
+<body id="body">
     <header>
-        <picture>
-            <source media="(min-width:601px)" srcset="/images/bandeau_1200.jpg">
-            <img src="/images/bandeau_600.jpg" alt="Concours ICI Première. Voyage de rêve. Au menu. Écoutez Gravel le 
+        <picture class="picture__entete">
+            <source srcset="images/bandeau_600.jpg" media="(max-width:600px)">
+            <source srcset="images/bandeau_1200.jpg" media="(min-width:601px)">
+            <img class="picture__img" src="images/bandeau_1200.jpg" alt="Concours ICI Première. Voyage de rêve. Au menu. Écoutez Gravel le 
             Matin en semaine 5h30 au 95,1. Courez la chance de gagner un crédit 
             voyage de 20 000$ ! Commandité par Ici Première, Montréal en Lumière, 
             Bell et Voyages Traditours circuits et croisières.">
         </picture>
     </header>
     <main>
-        <section class="introduction">
+        <div class="main">
             <!-- Banderole -->
             <div class="titre_concours">
                 <h1 class="titre_concours_h1" id="concours_h1">Concours</h1>
@@ -40,235 +42,300 @@
                 </p>
                 </p>
             </div>
-        </section>
 
-        <!-- Début du formulaire -->
-        <form action="index.html" method="get">
-            <fieldset id="formulaire">
-                <legend>
-                    <h2> Coupon de participation </h2>
-                </legend>
 
-                <fieldset id="form--nom_complet">
-                    <legend id="form--nom_complet--legend">Nom complet</legend>
+            <!-- Début du formulaire -->
+            <fieldset id="coupon_participation_formulaire">
+                <legend id="coupon_participation_formulaire--legend">Coupon de participation</legend>
 
-                    <div class="form--nom_complet--prenom">
-                        <label for="prenom" class="form--nom_complet--prenom--label">Prénom</label>
-                        <input type="text" placeholder="" class="form--nom_complet--prenom--input" name="prenom"
-                            id="prenom" required>
+                <fieldset id="coupon_participation_formulaire--nom_complet">
+                    <legend id="coupon_participation_formulaire--nom_complet--legend">Nom complet</legend>
+
+
+                    <div class="coupon_participation_formulaire--nom_complet--prenom">
+                        <label for="prenom"
+                            class="coupon_participation_formulaire--nom_complet--prenom--label">Prénom</label>
+                        <input type="text" placeholder=""
+                            class="coupon_participation_formulaire--nom_complet--prenom--input" name="prenom"
+                            id="coupon_participation_formulaire--nom_complet--prenom--input" pattern="[a-zA-ZÀ-ÿ \-]+"
+                            required>
                     </div>
 
-                    <div class="form--nom_complet--nom">
-                        <label for="nom" class="form--nom_complet--nom--label">Nom</label>
-                        <input type="text" placeholder="" class="form--nom_complet--nom--input" name="nom"
-                            id="nom" required>
+                    <div class="coupon_participation_formulaire--nom_complet--nom">
+                        <label for="nom" class="coupon_participation_formulaire--nom_complet--nom--label">Nom</label>
+                        <input type="text" placeholder=""
+                            class="coupon_participation_formulaire--nom_complet--nom--input" name="nom" id="nom"
+                            pattern="[a-zA-ZÀ-ÿ \-]+" required>
                     </div>
 
-                    <div class="">
-                        <p id="nom_complet--p">*** À Coder en Javascript! Message d'erreur (3 possibilités)</p>
-                    </div>
+                    <p class="message-erreur">
+                        Message Erreur
+                    </p>
                 </fieldset>
 
                 <!-- Section entre les fieldsets -->
                 <div class="contenu_text_adresse">
-                    <p>
-                        <label for=" adresse" class="contenu_text_adresse--label">Adresse</label>
-                        <input type="number" placeholder="" class="contenu_text_adresse--input" name="adresse"
-                            id="adresse" required>
-                    </p>
-                    <p id="message_erreurAdresse">*** À Coder en Javascript! Message d'erreur (2 possibilités)</p>
+                    <label for="adresse" class="contenu_text_adresse--label">Adresse</label>
+                    <input type="number" placeholder="" class="contenu_text_adresse--input" name="adresse" id="adresse"
+                        required>
                 </div>
+
+                <p class="message-erreur"> </p>
+
 
                 <div class="contenu_text__ville">
-                    <p>
-                        <label for="ville" class="contenu_text__ville--label">Ville</label>
-                        <input type="text" class="contenu_text__ville--input" name="ville" id="ville" required>
-                    </p>
-
-                    <p id="message_erreurVille">*** À Coder en Javascript! Message d'erreur (2 possibilités)</p>
+                    <label for="ville" class="contenu_text__ville--label">Ville</label>
+                    <input type="text" class="contenu_text__ville--input" name="ville" id="ville" required>
                 </div>
+
+                <p class="message-erreur"> </p>
 
 
                 <div class="contenu_text__pays">
-                    <p>
-                        <label for="pays" class="contenu_text__pays--label">Pays</label>
-                        <select class="contenu_text__pays--select" name="pays" id="pays" required>
-                            <option disabled="null" selected="null">province ou état</option>
-                            <option value="QC" id="pays-0">Québec</option>
-                            <option value="ON" id="pays-1">Ontario</option>
-                            <option value="AB" id="pays-2">Alberta</option>
-                            <option value="NB" id="pays-3">Nouveau-Brunswick</option>
-                            <option value="N.É." id="pays-4">Nouvelle-Écosse</option>
-                            <option value="MA" id="pays-5">Manitoba</option>
-                            <option value="IPE" id="pays-6">Île du Prince Edouard</option>
-                            <option value="NV" id="pays-7">Nunavut</option>
-                            <option value="YK" id="pays-8">Yukon</option>
-                        </select>
-                    </p>
-                    <p id="message_erreur">*** À Coder en Javascript! Message d'erreur (1 possibilité)</p>
-
+                    <label for="pays" class="contenu_text__pays--label">Pays</label>
+                    <select class="contenu_text__pays--select" name="pays" id="pays" required>
+                        <option value="">Choisir une option</option>
+                        <optgroup label="Canada"></optgroup>
+                        <option value="AB">Alberta</option>
+                        <option value="BC">British Columbia</option>
+                        <option value="MB">Manitoba</option>
+                        <option value="NB">New Brunswick</option>
+                        <option value="NL">Newfoundland and Labrador</option>
+                        <option value="NS">Nova Scotia</option>
+                        <option value="ON">Ontario</option>
+                        <option value="PE">Prince Edward Island</option>
+                        <option value="QC">Quebec</option>
+                        <option value="SK">Saskatchewan</option>
+                        <option value="NT">Northwest Territories</option>
+                        <option value="NU">Nunavut</option>
+                        <option value="YT">Yukon</option>
+                        <optgroup label="État-Unis"></optgroup>
+                        <option value="AL">Alabama</option>
+                        <option value="AK">Alaska</option>
+                        <option value="AZ">Arizona</option>
+                        <option value="AR">Arkansas</option>
+                        <option value="CA">California</option>
+                        <option value="CO">Colorado</option>
+                        <option value="CT">Connecticut</option>
+                        <option value="DE">Delaware</option>
+                        <option value="DC">District Of Columbia</option>
+                        <option value="FL">Florida</option>
+                        <option value="GA">Georgia</option>
+                        <option value="HI">Hawaii</option>
+                        <option value="ID">Idaho</option>
+                        <option value="IL">Illinois</option>
+                        <option value="IN">Indiana</option>
+                        <option value="IA">Iowa</option>
+                        <option value="KS">Kansas</option>
+                        <option value="KY">Kentucky</option>
+                        <option value="LA">Louisiana</option>
+                        <option value="ME">Maine</option>
+                        <option value="MD">Maryland</option>
+                        <option value="MA">Massachusetts</option>
+                        <option value="MI">Michigan</option>
+                        <option value="MN">Minnesota</option>
+                        <option value="MS">Mississippi</option>
+                        <option value="MO">Missouri</option>
+                        <option value="MT">Montana</option>
+                        <option value="NE">Nebraska</option>
+                        <option value="NV">Nevada</option>
+                        <option value="NH">New Hampshire</option>
+                        <option value="NJ">New Jersey</option>
+                        <option value="NM">New Mexico</option>
+                        <option value="NY">New York</option>
+                        <option value="NC">North Carolina</option>
+                        <option value="ND">North Dakota</option>
+                        <option value="OH">Ohio</option>
+                        <option value="OK">Oklahoma</option>
+                        <option value="OR">Oregon</option>
+                        <option value="PA">Pennsylvania</option>
+                        <option value="RI">Rhode Island</option>
+                        <option value="SC">South Carolina</option>
+                        <option value="SD">South Dakota</option>
+                        <option value="TN">Tennessee</option>
+                        <option value="TX">Texas</option>
+                        <option value="UT">Utah</option>
+                        <option value="VT">Vermont</option>
+                        <option value="VA">Virginia</option>
+                        <option value="WA">Washington</option>
+                        <option value="WV">West Virginia</option>
+                        <option value="WI">Wisconsin</option>
+                        <option value="WY">Wyoming</option>
+                    </select>
                 </div>
+
+                <p class="message-erreur">
+                    Message Erreur
+                </p>
+
 
                 <div class="contenu_text__code-postal">
-                    <p>
-                        <label for="code-postal" class="contenu_text__code-postal--label">Code Postal</label>
-                        <input type="text" class="contenu_text__code-postal--input" name="code-postal" id="code-postal"
-                            required>
-                    </p>
-                    <p id="message_erreur">*** À Coder en Javascript! Message d'erreur (2 possibilités)</p>
-
+                    <label for="code-postal" class="contenu_text__code-postal--label">Code Postal (X1X 1X1)</label>
+                    <input type="text" class="contenu_text__code-postal--input" name="code-postal" id="code-postal"
+                        pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" required minlength="6" maxlength="6">
                 </div>
+
+                <p class="message-erreur">
+                    Message Erreur
+                </p>
 
 
                 <div class="contenu_text__courriel">
-                    <p>
-                        <label for="courriel" class="contenu_text__courriel--label">Courriel</label>
-                        <input type="email" class="contenu_text__courriel--input" name="courriel" id="courriel"
-                            required>
-                    </p>
-                    <p id="message_erreur">*** À Coder en Javascript! Message d'erreur (2 possibilités)</p>
+                    <label for="courriel" class="contenu_text__courriel--label">Courriel</label>
+                    <input type="email" class="contenu_text__courriel--input" name="courriel" id="courriel" required>
                 </div>
+
+                <p class="message-erreur">
+                    Message Erreur
+                </p>
+
 
                 <!-- Section numéro de telephone du formulaire -->
                 <fieldset id="telephone">
                     <legend id="telephone--legend">Telephone (indicatif - numero)</legend>
 
-                    <div class="telephone">
-                        <p class="telephone_indicatif">
-                            <label for="indicatif" class="telephone_indicatif--label">Indicatif</label>
-                            <input type="number" class="telephone_indicatif--input" name="indicatif" id="indicatif"
-                                required>
+                    <div class="telephone_indicatif">
+                        <label for="indicatif" class="telephone_indicatif--label">Indicatif</label>
+                        <input type="number" class="telephone_indicatif--input" name="indicatif" id="indicatif" required
+                            minlength="3" maxlength="3">
+                        <p>
+                            -
                         </p>
-
-                        <p class="telephone_numero">
-                            <label for="numero" class="telephone_numero--label">Numéro</label>
-                            <input type="number" class="telephone_numero--input" name="numero" id="numero" required>
-                        </p>
-                        <p id="message_erreur">*** À Coder en Javascript! Message d'erreur (3 possibilités)</p>
                     </div>
 
+                    <div class="telephone_numero">
+                        <label for="numero" class="telephone_numero--label">Numéro</label>
+                        <input type="number" class="telephone_numero--input" name="numero" id="numero" required
+                            minlength="7" maxlength="7">
+
+                        <p class="message-erreur">
+                            Message Erreur
+                        </p>
+                    </div>
                 </fieldset>
 
                 <!-- Section Question du jour -->
 
                 <fieldset id="question_du_jour">
+                    <legend class="h2">Question du jour</legend>
                     <fieldset id="question_du_jour--date">
-                        <legend id="question_du_jour--date--legend">Date à laquelle la question e été posée?
-                        </legend>
+                        <legend id="question_du_jour--date--legend">Date à laquelle la question à été posée?</legend>
+                        <div class="question_du_jour--date--jour">
+                            <label for="jour" class="question_du_jour--date--jour--label">Jour</label>
+                            <input type="number" placeholder="" class="question_du_jour--date--jour--input" name="jour"
+                                min="0" max="31" id="jour" required>
+                        </div>
+                        <div class="question_du_jour--mois">
+                            <label for="mois" class="question_du_jour--mois--label">Mois</label>
+                            <select class="question_du_jour--mois--select" name="mois" id="mois" required>
+                                <option disabled="null" selected="null">Sélectionner</option>
+                                <option value="JAN" id="mois-0">Janvier</option>
+                                <option value="FEV" id="mois-1">Février</option>
+                                <option value="MAR" id="mois-2">Mars</option>
+                                <option value="AVR" id="mois-3">Avril</option>
+                                <option value="MAI" id="mois-4">Mai</option>
+                                <option value="JUIN" id="mois-5">Juin</option>
+                                <option value="JUIL" id="mois-6">Juillet</option>
+                                <option value="AOU" id="mois-7">Août</option>
+                                <option value="SEP" id="mois-8">Septembre</option>
+                                <option value="OCT" id="mois-9">Octobre</option>
+                                <option value="NOV" id="mois-10">Novembre</option>
+                                <option value="DEC" id="mois-11">Décembre</option>
+                            </select>
+                        </div>
+                        <div class="date--annee">
+                            <label for="annee" class="date--annee--label">Année</label>
+                            <input type="number" placeholder="" class="date--annee--input" name="annee" min="0" max="31"
+                                id="annee" required>
 
-                        <div class="question_du_jour--date">
-                            <p class="question_du_jour--date--jour">
-                                <label for="jour" class="question_du_jour--date--jour--label">Jour</label>
-                                <input type="number" placeholder="" class="question_du_jour--date--jour--input"
-                                    name="jour" min="0" max="31" id="jour" required>
+                            <p class="message-erreur">
+                                Message Erreur
                             </p>
-
-                            <p class="question_du_jour--mois">
-                                <label for="mois" class="question_du_jour--mois--label">Mois</label>
-                                <select class="question_du_jour--mois--select" name="mois" id="mois" required>
-                                    <option disabled="null" selected="null">Sélectionner</option>
-                                    <option value="JAN" id="mois-0">Janvier</option>
-                                    <option value="FEV" id="mois-1">Février</option>
-                                    <option value="MAR" id="mois-2">Mars</option>
-                                    <option value="AVR" id="mois-3">Avril</option>
-                                    <option value="MAI" id="mois-4">Mai</option>
-                                    <option value="JUIN" id="mois-5">Juin</option>
-                                    <option value="JUIL" id="mois-6">Juillet</option>
-                                    <option value="AOU" id="mois-7">Août</option>
-                                    <option value="SEP" id="mois-8">Septembre</option>
-                                    <option value="OCT" id="mois-9">Octobre</option>
-                                    <option value="NOV" id="mois-10">Novembre</option>
-                                    <option value="DEC" id="mois-11">Décembre</option>
-                                </select>
-                            </p>
-                            <p class="date--annee">
-                                <label for="annee" class="date--annee--label">Année</label>
-                                <input type="number" placeholder="" class="date--annee--input" name="annee" min="0"
-                                    max="31" id="annee" required>
-                            </p>
-                            <p id="message_erreur">*** À Coder en Javascript! Message d'erreur (1 possibilité)</p>
                         </div>
                     </fieldset>
 
                     <!-- Section Monuments-->
                     <fieldset id="monument_mausolee">
-                        <legend id="monument_mausolee--legend">Lequel de ces monuments est un mausolée?</legend>
+                        <legend id="monument_mausolee--legend">Lequel de ces monuments est un mausolée?</legend
+                            required>
 
                         <div class="monument_mausolee">
                             <label for="monument_mausolee" class="monument_mausolee--label">
-
                                 <div class="monument_mausolee_formulaire">
-                                    <ul>
-                                        <li>
-                                            <p class="monument_mausolee_formulaire--mausolee">
-                                                <input name="monument_mausolee" id="monument_mausolee-0"
-                                                    value="chateau_dif" type="radio" required>
+                                    <div class="monument_mausolee_formulaire--mausolee">
+                                        <ul>
+                                            <li>
+                                                <input name="monument_mausolee-0" id="monument_mausolee-0"
+                                                    value="chateau_dif" type="checkbox">
                                                 <img src="./images/chateaudIf-small.jpg" alt="Le château d'If">
-                                                <label for="monument_mausolee-0">Le château d'If</label>
-                                            </p>
-                                        </li>
-
-                                        <li>
-                                            <p class="monument_mausolee_formulaire--mausolee">
-                                                <input name="monument_mausolee" id="monument_mausolee-1"
-                                                    value="palais_lux" type="radio" required>
+                                                <label for="If">Le château d'If</label>
+                                            </li>
+                                            <li>
+                                                <input name="monument_mausolee-1" id="monument_mausolee-1"
+                                                    value="palais_lux" type="checkbox">
                                                 <img src="./images/palaisluxembourg-small.jpg"
                                                     alt="Le palais du Luxembourg">
-                                                <label for="monument_mausolee-1">Le palais du Luxembourg</label>
-                                            </p>
-                                        </li>
-
-                                        <li>
-                                            <p class="monument_mausolee_formulaire--mausolee">
-                                                <input name="monument_mausolee" id="monument_mausolee-2"
-                                                    value="taj_mahal" type="radio" required>
+                                                <label for="Luxembourg">Le palais du Luxembourg</label>
+                                            </li>
+                                            <li>
+                                                <input name="monument_mausolee-2" id="monument_mausolee-2"
+                                                    value="taj_mahal" type="checkbox">
                                                 <img src="./images/tajmahal-small.jpg" alt="Le Taf Mahal">
-                                                <label for="monument_mausolee-2">Le Taj Mahal</label>>
-                                            </p>
-                                        </li>
-                                    </ul>
+                                                <label for="taj_Mahal">Le Taj Mahal</label>
+                                            </li>
+                                    </div>
                                 </div>
-                    </fieldset>
-                </fieldset>
 
-                <!-- Section Acceptation des règles et documentation-->
-                <div class="politique_acceptation">
-                    <!-- Section Acceptation des règlement du concours-->
-                    <p class="politique_acceptation_reglement_checkbox">
-                        <input name="acceptation_reglement" id="acceptation_reglement" value="acceptation_reglement"
-                            type="checkbox">
-                        <label for="acceptation_reglement">J'ai lu et j'accepte le règlement du concours (lien à
-                            faire vers et je confirme avoir atteint l'âge de majorité dans ma province de
-                            résidence.</label>
-                    </p>
+                                <p class="message-erreur">
+                                    Message Erreur
+                                </p>
+                        </div>
+        </div>
+        </fieldset>
+        </fieldset>
 
-                    <!-- Section Reception documentation -->
-                    <p class="politique_acceptation_reception_documentation_checkbox">
-                        <input name="acceptation_reception_documentation" id="acceptation_reception_documentation"
-                            value="acceptation_reception_documentation" type="checkbox">
-                        <label for="acceptation_reception_documentation">Oui, j'accepte de recevoir de la
-                            documentation de Radio- Canada</label>
-                    </p>
-                </div>
+        <!-- Section Acceptation des règles et documentation-->
+        <div class="politique_acceptation">
 
-                <!-- Section bouton soumettre-->
-                <div class="bouton_soumettre">
-                    <p>
-                        <button type="button" class="bouton_soumettre--button" name="bouton_soumettre"
-                            id="bouton_soumettre">Enregistrer</button>
-                    </p>
-                </div>
-            </fieldset>
-        </form>
+            <!-- Section Acceptation des règlement du concours-->
+            <div class="politique_acceptation_reglement_checkbox">
+                <input name="acceptation_reglement" id="acceptation_reglement" value="acceptation_reglement"
+                    type="radio" required>
+                <label for="acceptation_reglement">J'ai lu et j'accepte le règlement du concours (lien à
+                    faire vers et je confirme avoir atteint l'âge de majorité dans ma province de
+                    résidence.</label>
+
+                <p class="message-erreur">
+                    Message Erreur
+                </p>
+            </div>
+
+            <!-- Section Reception documentation -->
+            <div class="politique_acceptation_reception_documentation_checkbox">
+                <input name="acceptation_reception_documentation" id="acceptation_reception_documentation"
+                    value="acceptation_reception_documentation" type="radio">
+                <label for="acceptation_reception_documentation">Oui, j'accepte de recevoir de la
+                    documentation de Radio- Canada</label>
+
+                <p class="message-erreur">
+                    Message Erreur
+                </p>
+            </div>
+        </div>
+
+        <!-- Section bouton soumettre-->
+        <div class="bouton_soumettre">
+            <button type="button" class="bouton_soumettre--button" name="bouton_soumettre"
+                id="bouton_soumettre">Enregistrer</button>
+        </div>
+        </div>
+        </fieldset>
     </main>
 
     <footer>
         <p class="copyright"><small>Tous droits réservés, &copy; Projet en Intégration <time>2022</time> - Kingma-Lord
                 Michel</small></p>
     </footer>
-    <!-- Script à connecter au Javascript pour messages d'erreurs
-         <script src="scripts/main.js"></script> 
-        -->
 </body>
 
 </html>
