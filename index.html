@@ -165,7 +165,7 @@
                 <div class="contenu_text__code-postal">
                     <label for="code-postal" class="contenu_text__code-postal--label">Code Postal (X1X 1X1)</label>
                     <input type="text" class="contenu_text__code-postal--input" name="code-postal" id="code-postal"
-                        pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" required minlength="7" maxlength="7">
+                        pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" title="(X1X 1X1)" required minlength="7" maxlength="7">
                 </div>
 
                 <p class="message-erreur">
@@ -199,7 +199,7 @@
                     <div class="telephone_numero">
                         <label for="numero" class="telephone_numero--label">Numéro (XXX-XXXX)</label>
                         <input type="tel" class="telephone_numero--input" name="numero" id="numero"
-                            pattern="[0-9]{3}-[0-9]{4}" required minlength="8" maxlength="8">
+                            pattern="[0-9]{3}-[0-9]{4}" title="(XXX-XXXX)" required minlength="8" maxlength="8">
 
                         <p class="message-erreur">
                             Message Erreur
@@ -256,37 +256,44 @@
                         <label for="monument_mausolee" class="monument_mausolee--label">
                             <ul>
                                 <li>
-                                    <input name="monument_mausolee" id="monument_mausolee-0" value="chateau_dif"
-                                        type="radio">
+                                    <label for="If">
+                                        <input name="monument_mausolee" id="monument_mausolee-0" value="chateau_dif"
+                                            type="radio">
                                         <picture class="picture__chateaudIf">
                                             <source srcset="images/chateaudIf-small.jpg" media="(max-width:600px)">
                                             <source srcset="images/chateaudIf.jpg" media="(min-width:601px)">
                                             <img class="picture__img" src="images/chateaudIf.jpg" alt="Le château d'If">
                                         </picture>
-                                      
-                                    <label for="If">Le château d'If</label>
+                                        <span>Le château d'If</span>
+                                    </label>
                                 </li>
-                                <li>
-                                    <input name="monument_mausolee" id="monument_mausolee-1" value="palais_lux"
-                                        type="radio">
-                                        <picture class="picture__palaisLux">
-                                            <source srcset="images/palaisluxembourg-small.jpg" media="(max-width:600px)">
-                                            <source srcset="images/palaisluxembourg.jpg" media="(min-width:601px)">
-                                            <img class="picture__img" src="images/palaisluxembourg.jpg" alt="Le palais du Luxembourg">
-                                        </picture>
 
-                                    <label for="Luxembourg">Le palais du Luxembourg</label>
-                                </li>
                                 <li>
-                                    <input name="monument_mausolee" id="monument_mausolee-2" value="taj_mahal"
-                                        type="radio">
+                                    <label for="Luxembourg">
+                                        <input name="monument_mausolee" id="monument_mausolee-1" value="palais_lux"
+                                            type="radio">
+                                        <picture class="picture__palaisLux">
+                                            <source srcset="images/palaisluxembourg-small.jpg"
+                                                media="(max-width:600px)">
+                                            <source srcset="images/palaisluxembourg.jpg" media="(min-width:601px)">
+                                            <img class="picture__img" src="images/palaisluxembourg.jpg"
+                                                alt="Le palais du Luxembourg">
+                                        </picture>
+                                        <span>Le palais du Luxembourg</span>
+                                    </label>
+                                </li>
+
+                                <li>
+                                    <label for="taj_Mahal">
+                                        <input name="monument_mausolee" id="monument_mausolee-2" value="taj_mahal"
+                                            type="radio">
                                         <picture class="picture__palaisLux">
                                             <source srcset="images/tajmahal-small.jpg" media="(max-width:600px)">
                                             <source srcset="images/tajmahal.jpg" media="(min-width:601px)">
                                             <img class="picture__img" src="images/tajmahal.jpg" alt="Le Taf Mahal">
                                         </picture>
-
-                                    <label for="taj_Mahal">Le Taj Mahal</label>
+                                        <span>Le Taj Mahal</span>
+                                    </label>
                                 </li>
 
                                 <p class="message-erreur">
