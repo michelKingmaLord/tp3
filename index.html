@@ -24,27 +24,25 @@
             Bell et Voyages Traditours circuits et croisières.">
         </picture>
     </header>
-    <main>
-        <div class="main">
-            <!-- Banderole -->
-            <div class="titre_concours">
-                <h1 class="titre_concours_h1" id="concours_h1">Concours</h1>
-            </div>
-            <div class="titre_concours_texte">
-                <p class="titre_concours_texte--p" id="titre_concours_texte--p">
-                <p><span>Complétez le coupon de participation et répondez à la question du jour
-                        ci-dessous.</span></p>
-                <p><span>30 finalistes accompagnés seront invités le jeudi 1er mars au restaurant
-                        Blumenthal pour un petit déjeuner préparé par le chef Rémi Brunelle. Parmi
-                        les finalistes présents, un grand gagnant s'envolera vers la destination de son
-                        choix!</span></p>
-                <p><span>Vous avez jusqu'au vendredi 9 février à midi pour participer. Bonne chance à tous!</span>
-                </p>
-                </p>
-            </div>
+    <main class="main">
+
+        <!-- Banderole -->
+
+        <h1 class="h1">Concours</h1>
+
+        <div class="introduction">
+            <p>Complétez le coupon de participation et répondez à la question du jour
+                ci-dessous.</p>
+            <p>30 finalistes accompagnés seront invités le jeudi 1er mars au restaurant
+                Blumenthal pour un petit déjeuner préparé par le chef Rémi Brunelle. Parmi
+                les finalistes présents, un grand gagnant s'envolera vers la destination de son
+                choix!</p>
+            <p>Vous avez jusqu'au vendredi 9 février à midi pour participer. Bonne chance à tous!</p>
+        </div>
 
 
-            <!-- Début du formulaire -->
+        <!-- Début du formulaire -->
+        <form action="index.html">
             <fieldset id="coupon_participation_formulaire">
                 <legend id="h2">Coupon de participation</legend>
 
@@ -215,122 +213,123 @@
                 </fieldset>
             </fieldset>
 
-                <!-- Section Question du jour -->
+            <!-- Section Question du jour -->
 
-                <fieldset id="question_du_jour">
-                    <legend class="h3">Question du jour</legend>
-                    <fieldset id="question_du_jour--date">
-                        <legend id="question_du_jour--date--legend">Date à laquelle la question à été posée?</legend>
-                        <div class="question_du_jour--date--jour">
-                            <label for="jour" class="question_du_jour--date--jour--label">Jour</label>
-                            <input type="number" placeholder="" class="question_du_jour--date--jour--input" name="jour"
-                                min="0" max="31" id="jour" required>
-                        </div>
-                        <div class="question_du_jour--mois">
-                            <label for="mois" class="question_du_jour--mois--label">Mois</label>
-                            <select class="question_du_jour--mois--select" name="mois" id="mois" required>
-                                <option disabled="null" selected="null">Sélectionner</option>
-                                <option value="JAN" id="mois-0">Janvier</option>
-                                <option value="FEV" id="mois-1">Février</option>
-                                <option value="MAR" id="mois-2">Mars</option>
-                                <option value="AVR" id="mois-3">Avril</option>
-                                <option value="MAI" id="mois-4">Mai</option>
-                                <option value="JUIN" id="mois-5">Juin</option>
-                                <option value="JUIL" id="mois-6">Juillet</option>
-                                <option value="AOU" id="mois-7">Août</option>
-                                <option value="SEP" id="mois-8">Septembre</option>
-                                <option value="OCT" id="mois-9">Octobre</option>
-                                <option value="NOV" id="mois-10">Novembre</option>
-                                <option value="DEC" id="mois-11">Décembre</option>
-                            </select>
-                        </div>
-                        <div class="date--annee">
-                            <label for="annee" class="date--annee--label">Année</label>
-                            <input type="number" placeholder="" class="date--annee--input" name="annee" min="0" max="31"
-                                id="annee" required>
+            <fieldset id="question_du_jour">
+                <legend class="h3">Question du jour</legend>
+                <fieldset id="question_du_jour--date">
+                    <legend id="question_du_jour--date--legend">Date à laquelle la question à été posée?</legend>
+                    <div class="question_du_jour--date--jour">
+                        <label for="jour" class="question_du_jour--date--jour--label">Jour</label>
+                        <input type="number" placeholder="" class="question_du_jour--date--jour--input" name="jour"
+                            min="0" max="31" id="jour" required>
+                    </div>
+                    <div class="question_du_jour--mois">
+                        <label for="mois" class="question_du_jour--mois--label">Mois</label>
+                        <select class="question_du_jour--mois--select" name="mois" id="mois" required>
+                            <option disabled="null" selected="null">Sélectionner</option>
+                            <option value="JAN" id="mois-0">Janvier</option>
+                            <option value="FEV" id="mois-1">Février</option>
+                            <option value="MAR" id="mois-2">Mars</option>
+                            <option value="AVR" id="mois-3">Avril</option>
+                            <option value="MAI" id="mois-4">Mai</option>
+                            <option value="JUIN" id="mois-5">Juin</option>
+                            <option value="JUIL" id="mois-6">Juillet</option>
+                            <option value="AOU" id="mois-7">Août</option>
+                            <option value="SEP" id="mois-8">Septembre</option>
+                            <option value="OCT" id="mois-9">Octobre</option>
+                            <option value="NOV" id="mois-10">Novembre</option>
+                            <option value="DEC" id="mois-11">Décembre</option>
+                        </select>
+                    </div>
+                    <div class="date--annee">
+                        <label for="annee" class="date--annee--label">Année</label>
+                        <input type="number" placeholder="" class="date--annee--input" name="annee" min="0" max="31"
+                            id="annee" required>
+
+                        <p class="message-erreur">
+                            Message Erreur
+                        </p>
+                    </div>
+                </fieldset>
+
+                <!-- Section Monuments-->
+                <fieldset id="monument_mausolee">
+                    <legend id="monument_mausolee--legend">Lequel de ces monuments est un mausolée?</legend required>
+
+                    <div class="monument_mausolee">
+                        <label for="monument_mausolee" class="monument_mausolee--label">
+                            <div class="monument_mausolee_formulaire">
+                                <div class="monument_mausolee_formulaire--mausolee">
+                                    <ul>
+                                        <li>
+                                            <input name="monument_mausolee-0" id="monument_mausolee-0"
+                                                value="chateau_dif" type="checkbox">
+                                            <img src="./images/chateaudIf-small.jpg" alt="Le château d'If">
+                                            <label for="If">Le château d'If</label>
+                                        </li>
+                                        <li>
+                                            <input name="monument_mausolee-1" id="monument_mausolee-1"
+                                                value="palais_lux" type="checkbox">
+                                            <img src="./images/palaisluxembourg-small.jpg"
+                                                alt="Le palais du Luxembourg">
+                                            <label for="Luxembourg">Le palais du Luxembourg</label>
+                                        </li>
+                                        <li>
+                                            <input name="monument_mausolee-2" id="monument_mausolee-2" value="taj_mahal"
+                                                type="checkbox">
+                                            <img src="./images/tajmahal-small.jpg" alt="Le Taf Mahal">
+                                            <label for="taj_Mahal">Le Taj Mahal</label>
+                                        </li>
+                                </div>
+                            </div>
 
                             <p class="message-erreur">
                                 Message Erreur
                             </p>
-                        </div>
-                    </fieldset>
-
-                    <!-- Section Monuments-->
-                    <fieldset id="monument_mausolee">
-                        <legend id="monument_mausolee--legend">Lequel de ces monuments est un mausolée?</legend
-                            required>
-
-                        <div class="monument_mausolee">
-                            <label for="monument_mausolee" class="monument_mausolee--label">
-                                <div class="monument_mausolee_formulaire">
-                                    <div class="monument_mausolee_formulaire--mausolee">
-                                        <ul>
-                                            <li>
-                                                <input name="monument_mausolee-0" id="monument_mausolee-0"
-                                                    value="chateau_dif" type="checkbox">
-                                                <img src="./images/chateaudIf-small.jpg" alt="Le château d'If">
-                                                <label for="If">Le château d'If</label>
-                                            </li>
-                                            <li>
-                                                <input name="monument_mausolee-1" id="monument_mausolee-1"
-                                                    value="palais_lux" type="checkbox">
-                                                <img src="./images/palaisluxembourg-small.jpg"
-                                                    alt="Le palais du Luxembourg">
-                                                <label for="Luxembourg">Le palais du Luxembourg</label>
-                                            </li>
-                                            <li>
-                                                <input name="monument_mausolee-2" id="monument_mausolee-2"
-                                                    value="taj_mahal" type="checkbox">
-                                                <img src="./images/tajmahal-small.jpg" alt="Le Taf Mahal">
-                                                <label for="taj_Mahal">Le Taj Mahal</label>
-                                            </li>
-                                    </div>
-                                </div>
-
-                                <p class="message-erreur">
-                                    Message Erreur
-                                </p>
-                        </div>
-                    </fieldset>
+                    </div>
                 </fieldset>
-        </div>
-
-
-        <!-- Section Acceptation des règles et documentation-->
-        <div class="politique_acceptation">
-
-            <!-- Section Acceptation des règlement du concours-->
-            <div class="politique_acceptation_reglement_checkbox">
-                <input name="acceptation_reglement" id="acceptation_reglement" value="acceptation_reglement"
-                    type="radio" required>
-                <label for="acceptation_reglement">J'ai lu et j'accepte le règlement du concours (lien à
-                    faire vers et je confirme avoir atteint l'âge de majorité dans ma province de
-                    résidence.</label>
-
-                <p class="message-erreur">
-                    Message Erreur
-                </p>
+            </fieldset>
             </div>
 
-            <!-- Section Reception documentation -->
-            <div class="politique_acceptation_reception_documentation_checkbox">
-                <input name="acceptation_reception_documentation" id="acceptation_reception_documentation"
-                    value="acceptation_reception_documentation" type="radio">
-                <label for="acceptation_reception_documentation">Oui, j'accepte de recevoir de la
-                    documentation de Radio- Canada</label>
 
-                <p class="message-erreur">
-                    Message Erreur
+            <!-- Section Acceptation des règles et documentation-->
+            <div class="politique_acceptation">
+
+                <!-- Section Acceptation des règlement du concours-->
+                <div class="politique_acceptation_reglement_checkbox">
+                    <input name="acceptation_reglement" id="acceptation_reglement" value="acceptation_reglement"
+                        type="radio" required>
+                    <label for="acceptation_reglement">J'ai lu et j'accepte le règlement du concours (lien à
+                        faire vers et je confirme avoir atteint l'âge de majorité dans ma province de
+                        résidence.</label>
+
+                    <p class="message-erreur">
+                        Message Erreur
+                    </p>
+                </div>
+
+                <!-- Section Reception documentation -->
+                <div class="politique_acceptation_reception_documentation_checkbox">
+                    <input name="acceptation_reception_documentation" id="acceptation_reception_documentation"
+                        value="acceptation_reception_documentation" type="radio">
+                    <label for="acceptation_reception_documentation">Oui, j'accepte de recevoir de la
+                        documentation de Radio- Canada</label>
+
+                    <p class="message-erreur">
+                        Message Erreur
+                    </p>
+                </div>
+
+
+                <!-- Section bouton soumettre-->
+                <p class="bouton_soumettre">
+                    <button class="bouton_soumettre--button" name="bouton_soumettre"
+                        id="bouton_soumettre">Enregistrer</button>
                 </p>
             </div>
-        </div>
+        </form>
 
-        <!-- Section bouton soumettre-->
-        <div class="bouton_soumettre">
-            <button type="button" class="bouton_soumettre--button" name="bouton_soumettre"
-                id="bouton_soumettre">Enregistrer</button>
-        </div>
-        </div>
     </main>
 
     <footer>
