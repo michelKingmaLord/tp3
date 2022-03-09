@@ -24,12 +24,11 @@
             Bell et Voyages Traditours circuits et croisières.">
         </picture>
     </header>
+
     <main class="main">
 
         <!-- Banderole -->
-
         <h1 class="h1">Concours</h1>
-
         <div class="introduction">
             <p>Complétez le coupon de participation et répondez à la question du jour
                 ci-dessous.</p>
@@ -40,15 +39,13 @@
             <p>Vous avez jusqu'au vendredi 9 février à midi pour participer. Bonne chance à tous!</p>
         </div>
 
-
         <!-- Début du formulaire -->
-        <form action="index.html">
+        <form action="index.html" method="get">
             <fieldset id="coupon_participation_formulaire">
                 <legend id="h2">Coupon de participation</legend>
 
                 <fieldset id="coupon_participation_formulaire--nom_complet">
                     <legend id="coupon_participation_formulaire--nom_complet--legend">Nom complet</legend>
-
 
                     <div class="coupon_participation_formulaire--nom_complet--prenom">
                         <label for="prenom"
@@ -80,14 +77,12 @@
 
                 <p class="message-erreur"> </p>
 
-
                 <div class="contenu_text__ville">
                     <label for="ville" class="contenu_text__ville--label">Ville</label>
                     <input type="text" class="contenu_text__ville--input" name="ville" id="ville" required>
                 </div>
 
                 <p class="message-erreur"> </p>
-
 
                 <div class="contenu_text__pays">
                     <label for="pays" class="contenu_text__pays--label">Pays</label>
@@ -170,7 +165,7 @@
                 <div class="contenu_text__code-postal">
                     <label for="code-postal" class="contenu_text__code-postal--label">Code Postal (X1X 1X1)</label>
                     <input type="text" class="contenu_text__code-postal--input" name="code-postal" id="code-postal"
-                        pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" required minlength="6" maxlength="6">
+                        pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" required minlength="7" maxlength="7">
                 </div>
 
                 <p class="message-erreur">
@@ -202,9 +197,9 @@
                     </div>
 
                     <div class="telephone_numero">
-                        <label for="numero" class="telephone_numero--label">Numéro</label>
-                        <input type="number" class="telephone_numero--input" name="numero" id="numero" required
-                            minlength="7" maxlength="7">
+                        <label for="numero" class="telephone_numero--label">Numéro (XXX-XXXX)</label>
+                        <input type="tel" class="telephone_numero--input" name="numero" id="numero"
+                            pattern="[0-9]{3}-[0-9]{4}" required minlength="8" maxlength="8">
 
                         <p class="message-erreur">
                             Message Erreur
@@ -244,7 +239,7 @@
                     </div>
                     <div class="date--annee">
                         <label for="annee" class="date--annee--label">Année</label>
-                        <input type="number" placeholder="" class="date--annee--input" name="annee" min="0" max="31"
+                        <input type="number" placeholder="" class="date--annee--input" name="annee" min="0" max="3000"
                             id="annee" required>
 
                         <p class="message-erreur">
@@ -259,34 +254,29 @@
 
                     <div class="monument_mausolee">
                         <label for="monument_mausolee" class="monument_mausolee--label">
-                            <div class="monument_mausolee_formulaire">
-                                <div class="monument_mausolee_formulaire--mausolee">
-                                    <ul>
-                                        <li>
-                                            <input name="monument_mausolee-0" id="monument_mausolee-0"
-                                                value="chateau_dif" type="checkbox">
-                                            <img src="./images/chateaudIf-small.jpg" alt="Le château d'If">
-                                            <label for="If">Le château d'If</label>
-                                        </li>
-                                        <li>
-                                            <input name="monument_mausolee-1" id="monument_mausolee-1"
-                                                value="palais_lux" type="checkbox">
-                                            <img src="./images/palaisluxembourg-small.jpg"
-                                                alt="Le palais du Luxembourg">
-                                            <label for="Luxembourg">Le palais du Luxembourg</label>
-                                        </li>
-                                        <li>
-                                            <input name="monument_mausolee-2" id="monument_mausolee-2" value="taj_mahal"
-                                                type="checkbox">
-                                            <img src="./images/tajmahal-small.jpg" alt="Le Taf Mahal">
-                                            <label for="taj_Mahal">Le Taj Mahal</label>
-                                        </li>
-                                </div>
-                            </div>
+                            <ul>
+                                <li>
+                                    <input name="monument_mausolee-0" id="monument_mausolee-0" value="chateau_dif"
+                                        type="radio">
+                                    <img src="./images/chateaudIf-small.jpg" alt="Le château d'If">
+                                    <label for="If">Le château d'If</label>
+                                </li>
+                                <li>
+                                    <input name="monument_mausolee-1" id="monument_mausolee-1" value="palais_lux"
+                                        type="radio">
+                                    <img src="./images/palaisluxembourg-small.jpg" alt="Le palais du Luxembourg">
+                                    <label for="Luxembourg">Le palais du Luxembourg</label>
+                                </li>
+                                <li>
+                                    <input name="monument_mausolee-2" id="monument_mausolee-2" value="taj_mahal"
+                                        type="radio">
+                                    <img src="./images/tajmahal-small.jpg" alt="Le Taf Mahal">
+                                    <label for="taj_Mahal">Le Taj Mahal</label>
+                                </li>
 
-                            <p class="message-erreur">
-                                Message Erreur
-                            </p>
+                                <p class="message-erreur">
+                                    Message Erreur
+                                </p>
                     </div>
                 </fieldset>
             </fieldset>
