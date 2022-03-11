@@ -46,19 +46,19 @@
                 </legend>
 
                 <fieldset class="nom_complet ctnValidation">
-                    <legend id="nom_complet--legend">Nom complet</legend>
+                    <legend id="h4">Nom complet</legend>
 
                     <div class="nom_complet rangee">
                         <p class="prenom cols_6_de_12">
                             <label for="prenom" class="nom_complet--prenom--label">Prénom</label>
-                            <input type="text" placeholder="" class="nom_complet--prenom--input" name="prenom"
-                                id="prenom" pattern="[a-zA-ZÀ-ÿ \-]+" required>
+                            <input type="text" class="nom_complet--prenom--input" name="prenom" id="prenom" required
+                                pattern="[a-zA-ZÀ-ÿ \-]+" title="Caractères alphanumériques français seulement">
                         </p>
 
                         <p class="nom cols_6_de_12">
                             <label for="nom" class="nom_complet--nom--label">Nom</label>
-                            <input type="text" placeholder="" class="nom--input" name="nom" id="nom"
-                                pattern="[a-zA-ZÀ-ÿ \-]+" required>
+                            <input type="text" placeholder="" class="nom--input" name="nom" id="nom" required
+                                pattern="[a-zA-ZÀ-ÿ \-]+" title="Caractères alphanumériques français seulement">
                         </p>
                     </div>
 
@@ -213,15 +213,15 @@
                 <fieldset class="telephone ctnValidation">
                     <legend id="telephone--legend">Telephone (indicatif - numero)</legend>
 
-                    <div class="rangee">
+                    <div class="telephone rangee">
                         <p class="cols_3_de_12">
-                            <label for="indicatif" class="telephone_indicatif--label">Indicatif</label>
-                            <input type="number" class="telephone_indicatif--input" name="indicatif" id="indicatif"
+                            <label for="indicatif">Indicatif</label>
+                            <input type="tel" class="telephone_indicatif--input" name="indicatif" id="indicatif"
                                 required minlength="3" maxlength="3">
                         </p>
                         <p class="cols_1_de_12 tiret">-</p>
                         <p class="cols_8_de_12">
-                            <label for="numero" class="telephone_numero--label">Numéro (XXX-XXXX)</label>
+                            <label for="numero">Numéro (XXX-XXXX)</label>
                             <input type="tel" class="telephone_numero--input" name="numero" id="numero"
                                 pattern="[0-9]{3}-[0-9]{4}" title="(XXX-XXXX)" required minlength="8" maxlength="8">
                         </p>
