@@ -46,32 +46,28 @@
                 </legend>
 
                 <fieldset class="nom_complet ctnValidation">
-                    <legend id="coupon_participation_formulaire--nom_complet--legend">Nom complet</legend>
+                    <legend id="nom_complet--legend">Nom complet</legend>
 
                     <div class="nom_complet">
                         <p class="prenom">
-                            <label for="prenom"
-                                class="coupon_participation_formulaire--nom_complet--prenom--label">Prénom</label>
-                            <input type="text" placeholder=""
-                                class="coupon_participation_formulaire--nom_complet--prenom--input" name="prenom"
-                                id="coupon_participation_formulaire--nom_complet--prenom--input"
-                                pattern="[a-zA-ZÀ-ÿ \-]+" required>
+                            <label for="prenom" class="nom_complet--prenom--label">Prénom</label>
+                            <input type="text" placeholder="" class="nom_complet--prenom--input" name="prenom"
+                                id="prenom" pattern="[a-zA-ZÀ-ÿ \-]+" required>
                         </p>
 
                         <p class="nom">
-                            <label for="nom"
-                                class="coupon_participation_formulaire--nom_complet--nom--label">Nom</label>
-                            <input type="text" placeholder=""
-                                class="coupon_participation_formulaire--nom_complet--nom--input" name="nom" id="nom"
+                            <label for="nom" class="nom_complet--nom--label">Nom</label>
+                            <input type="text" placeholder="" class="nom--input" name="nom" id="nom"
                                 pattern="[a-zA-ZÀ-ÿ \-]+" required>
                         </p>
-                        <p class="message-erreur">
-                            <span>Message Erreur
-                                <span class="screen-reader-only">Avertissement</span>
-                                <span class="icone icone--avertissement" aria-hidden="true"></span>
-                            </span>
-                        </p>
                     </div>
+
+                    <p class="message-erreur">
+                        <span>Message Erreur
+                            <span class="screen-reader-only">Avertissement</span>
+                            <span class="icone icone--avertissement" aria-hidden="true"></span>
+                        </span>
+                    </p>
                 </fieldset>
 
                 <!-- Section entre les fieldsets -->
@@ -377,7 +373,7 @@
                 <!-- Section Reception documentation -->
                 <div class="acceptation_documentation_checkbox">
                     <p>
-                        <input name="acceptation_reception_documentation" id="acceptation_reception_documentation"
+                        <input name="documentation" id="acceptation_reception_documentation"
                             value="acceptation_reception_documentation" type="checkbox">
                         <label for="acceptation_reception_documentation">Oui, j'accepte de recevoir de la
                             documentation de Radio- Canada</label>
