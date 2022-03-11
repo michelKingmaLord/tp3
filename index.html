@@ -40,22 +40,24 @@
 
         <!-- Début du formulaire -->
         <form class="cols_8_de_12" action="index.html" method="get">
-            <fieldset id="coupon_participation_formulaire">
-                <legend id="h2">Coupon de participation</legend>
+            <fieldset class="coupon_participation_formulaire">
+                <legend>
+                    <h2 class="h2">Coupon de participation</h2>
+                </legend>
 
                 <fieldset class="nom_complet ctnValidation">
                     <legend id="coupon_participation_formulaire--nom_complet--legend">Nom complet</legend>
 
-                    <div class="nom_complet" >
+                    <div class="nom_complet">
                         <p class="prenom">
                             <label for="prenom"
-                            class="coupon_participation_formulaire--nom_complet--prenom--label">Prénom</label>
-                        <input type="text" placeholder=""
-                            class="coupon_participation_formulaire--nom_complet--prenom--input" name="prenom"
-                            id="coupon_participation_formulaire--nom_complet--prenom--input" pattern="[a-zA-ZÀ-ÿ \-]+"
-                            required>
+                                class="coupon_participation_formulaire--nom_complet--prenom--label">Prénom</label>
+                            <input type="text" placeholder=""
+                                class="coupon_participation_formulaire--nom_complet--prenom--input" name="prenom"
+                                id="coupon_participation_formulaire--nom_complet--prenom--input"
+                                pattern="[a-zA-ZÀ-ÿ \-]+" required>
                         </p>
-            
+
                         <p class="nom">
                             <label for="nom"
                                 class="coupon_participation_formulaire--nom_complet--nom--label">Nom</label>
@@ -65,8 +67,9 @@
                         </p>
                         <p class="message-erreur">
                             <span>Message Erreur
-                                <span> </span>
-                                <span> </span>
+                                <span class="screen-reader-only" > 
+                                </span>
+                                <span class="icone icone--avertissement" aria-hidden="true"> </span>
                             </span>
                         </p>
                     </div>
@@ -79,10 +82,11 @@
                         <input type="number" placeholder="" class="contenu_text_adresse--input" name="adresse"
                             id="adresse" required>
                     </p>
-                    <p class="message-erreur"> 
+                    <p class="message-erreur">
                         <span>Message Erreur
-                            <span> </span>
-                            <span> </span>
+                            <span class="screen-reader-only" > 
+                            </span>
+                            <span class="icone icone--avertissement" aria-hidden="true"> </span>
                         </span>
                     </p>
                 </div>
@@ -92,10 +96,11 @@
                         <label for="ville" class="contenu_text__ville--label">Ville</label>
                         <input type="text" class="contenu_text__ville--input" name="ville" id="ville" required>
                     </p>
-                    <p class="message-erreur"> 
+                    <p class="message-erreur">
                         <span>Message Erreur
-                            <span> </span>
-                            <span> </span>
+                            <span class="screen-reader-only" > 
+                            </span>
+                            <span class="icone icone--avertissement" aria-hidden="true"> </span>
                         </span>
                     </p>
                 </div>
@@ -175,14 +180,12 @@
                     </p>
                     <p class="message-erreur">
                         <span>Message Erreur
-                            <span> </span>
-                            <span> </span>
+                            <span class="screen-reader-only" > 
+                            </span>
+                            <span class="icone icone--avertissement" aria-hidden="true"> </span>
                         </span>
                     </p>
                 </div>
-
-
-
 
                 <div class="contenu_text__code-postal ctnValidation">
                     <p>
@@ -194,13 +197,12 @@
 
                     <p class="message-erreur">
                         <span>Message Erreur
-                            <span> </span>
-                            <span> </span>
+                            <span class="screen-reader-only" > 
+                            </span>
+                            <span class="icone icone--avertissement" aria-hidden="true"> </span>
                         </span>
                     </p>
                 </div>
-
-
 
                 <div class="contenu_text__courriel ctnValidation">
                     <p>
@@ -210,8 +212,9 @@
                     </p>
                     <p class="message-erreur">
                         <span>Message Erreur
-                            <span> </span>
-                            <span> </span>
+                            <span class="screen-reader-only" > 
+                            </span>
+                            <span class="icone icone--avertissement" aria-hidden="true"> </span>
                         </span>
                     </p>
                 </div>
@@ -220,8 +223,8 @@
                 <fieldset class="telephone rangee ctnValidation">
                     <legend id="telephone--legend">Telephone (indicatif - numero)</legend>
 
-                    <div class="telephone_indicatif">
-                        <p class="cols_4_de_12">
+                    <div class="telephone_indicatif cols_4_de_12">
+                        <p>
                             <label for="indicatif" class="telephone_indicatif--label">Indicatif</label>
                             <input type="number" class="telephone_indicatif--input" name="indicatif" id="indicatif"
                                 required minlength="3" maxlength="3">
@@ -231,29 +234,33 @@
                         </p>
                     </div>
 
-                    <div class="telephone_numero">
-                        <p class="cols_8_de_12">
+                    <div class="telephone_numero cols_8_de_12">
+                        <p>
                             <label for="numero" class="telephone_numero--label">Numéro (XXX-XXXX)</label>
                             <input type="tel" class="telephone_numero--input" name="numero" id="numero"
                                 pattern="[0-9]{3}-[0-9]{4}" title="(XXX-XXXX)" required minlength="8" maxlength="8">
                         </p>
-                        <p class="message-erreur"> 
-                            <span>Message Erreur
-                                <span> </span>
-                                <span> </span>
-                            </span></p>
                     </div>
+                    <p class="message-erreur">
+                        <span>Message Erreur
+                            <span class="screen-reader-only" > 
+                            </span>
+                            <span class="icone icone--avertissement" aria-hidden="true"> </span>
+                        </span>
+                    </p>
                 </fieldset>
             </fieldset>
 
             <!-- Section Question du jour -->
 
             <fieldset class="question_du_jour ctnValidation">
-                <legend class="h3">Question du jour</legend>
+                <legend>
+                    <h2 class="h2">Question du jour</h2>
+                </legend>
                 <fieldset class="date ctnValidation">
                     <legend id="question_du_jour--date--legend">Date à laquelle la question à été posée?</legend>
                     <div class="rangee">
-                        <p class="cols_4_de_12"> 
+                        <p class="cols_4_de_12">
                             <label for="jour" class="question_du_jour--date--jour--label">Jour</label>
                             <input type="number" placeholder="" class="question_du_jour--date--jour--input" name="jour"
                                 min="0" max="31" id="jour" required>
@@ -286,8 +293,9 @@
 
                         <p class="message-erreur">
                             <span>Message Erreur
-                                <span> </span>
-                                <span> </span>
+                                <span class="screen-reader-only" > 
+                                </span>
+                                <span class="icone icone--avertissement" aria-hidden="true"> </span>
                             </span>
                         </p>
                     </div>
@@ -360,16 +368,16 @@
                 <div class="politique_acceptation_reglement_checkbox">
                     <p>
                         <input name="acceptation_reglement" id="acceptation_reglement" value="acceptation_reglement"
-                            type="radio" required>
+                            type="checkbox" required>
                         <label for="acceptation_reglement">J'ai lu et j'accepte le règlement du concours (lien à
                             faire vers et je confirme avoir atteint l'âge de majorité dans ma province de
                             résidence.</label>
                     </p>
                     <p class="message-erreur">
                         <span>Message Erreur
-                            <span class="screen"> 
+                            <span class="screen-reader-only" > 
                             </span>
-                            <span> </span>
+                            <span class="icone icone--avertissement" aria-hidden="true"> </span>
                         </span>
                     </p>
                 </div>
@@ -378,15 +386,16 @@
                 <div class="politique_acceptation_reception_documentation_checkbox">
                     <p>
                         <input name="acceptation_reception_documentation" id="acceptation_reception_documentation"
-                            value="acceptation_reception_documentation" type="radio">
+                            value="acceptation_reception_documentation" type="checkbox">
                         <label for="acceptation_reception_documentation">Oui, j'accepte de recevoir de la
                             documentation de Radio- Canada</label>
                     </p>
 
                     <p class="message-erreur">
                         <span>Message Erreur
-                            <span> </span>
-                            <span> </span>
+                            <span class="screen-reader-only" > 
+                            </span>
+                            <span class="icone icone--avertissement" aria-hidden="true"> </span>
                         </span>
                     </p>
                 </div>

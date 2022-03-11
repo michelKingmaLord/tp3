@@ -42,9 +42,96 @@
 
 
 /**************************
+Arrière Plan
+*************************/
+
+.coupon_participation_formulaire, .question_du_jour {
+   background-color: lightgrey;
+   border-radius: 1rem;
+   border: none
+}
+
+
+/**************************
 Banderole
 *************************/
 
 h1{
    width: 100%;
 }
+
+legend{
+   padding-top: 2rem;
+}
+
+/**************************
+Section
+*************************/
+
+/* Boutons radios accessibles
+   ========================================================================== */
+
+/*** Form ***/
+label{
+   /* placer les étiquettes au-dessus des champs de saisie */
+   display: block;
+}
+input[type=text],
+input[type=email],
+input[type=tel] {
+   /* pleine largeur pour la plupart des champs de saisie */
+   display: inline-block;
+   width: 100%;
+}
+
+/*** Label des boutons radio ***/
+/* le sélecteur met à profit
+le fait que le label est consécutif
+au input (cas des boutons radio et des cases à cocher)
+*/
+input[type=radio]+label {
+   display: inline-block;  
+   text-align: center;
+   border:2px solid transparent;
+}
+
+/*** Interactivité ***/
+[type=radio]:hover+label { 
+   cursor: pointer;
+}
+[type=radio]:hover+label,
+[type=radio]:focus+label { 
+   border:2px solid #09c231;
+}
+[type=radio]:checked+label { 
+   border:2px solid #068221;
+}
+
+/**** Screen Reader ***/
+.screen-reader-only, .visuallyhidden {
+   border: 0;
+   clip: rect(0 0 0 0);
+   height: 1px;
+   margin: -1px;
+   overflow: hidden;
+   padding: 0;
+   position: absolute;
+   width: 1px;
+   }
+
+
+/*** Bouton de soumission ***/
+button{
+   padding: 0.5rem;
+   background-color: #d6dfcf;
+}
+button:hover,
+button:focus{
+   background-color: #dfce99;
+}
+
+/*** Erreurs ***/
+.message-erreur{
+   color: orangered;
+}
+
