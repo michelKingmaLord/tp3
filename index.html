@@ -210,22 +210,17 @@
                 </div>
 
                 <!-- Section numéro de telephone du formulaire -->
-                <fieldset class="telephone rangee ctnValidation">
+                <fieldset class="telephone ctnValidation">
                     <legend id="telephone--legend">Telephone (indicatif - numero)</legend>
 
-                    <div class="telephone_indicatif cols_4_de_12">
-                        <p>
+                    <div class="rangee">
+                        <p class="cols_3_de_12">
                             <label for="indicatif" class="telephone_indicatif--label">Indicatif</label>
                             <input type="number" class="telephone_indicatif--input" name="indicatif" id="indicatif"
                                 required minlength="3" maxlength="3">
                         </p>
-                        <p>
-                            -
-                        </p>
-                    </div>
-
-                    <div class="telephone_numero cols_8_de_12">
-                        <p>
+                        <p class="cols_1_de_12 tiret">-</p>
+                        <p class="cols_8_de_12">
                             <label for="numero" class="telephone_numero--label">Numéro (XXX-XXXX)</label>
                             <input type="tel" class="telephone_numero--input" name="numero" id="numero"
                                 pattern="[0-9]{3}-[0-9]{4}" title="(XXX-XXXX)" required minlength="8" maxlength="8">
