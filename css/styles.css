@@ -36,7 +36,7 @@
 /* Mise en page
    ========================================================================== */
 
-.rangee{
+.rangee {
    list-style: none;
 }
 
@@ -56,12 +56,22 @@ Arrière Plan
 Banderole
 *************************/
 
-h1{
+.titre {
    width: 100%;
+   padding: var(--padding-text);
+   margin-bottom: 0;
 }
 
-legend{
+legend {
    padding-top: 2rem;
+}
+
+/**************************
+Balisage des images
+*************************/
+
+img {
+   margin-left: 0;
 }
 
 /**************************
@@ -72,7 +82,7 @@ Section
    ========================================================================== */
 
 /*** Form ***/
-label{
+label {
    /* placer les étiquettes au-dessus des champs de saisie */
    display: block;
 }
@@ -82,6 +92,8 @@ input[type=tel] {
    /* pleine largeur pour la plupart des champs de saisie */
    display: inline-block;
    width: 100%;
+   padding: 0.5rem;
+   border-radius: 0.5rem;
 }
 
 /*** Label des boutons radio ***/
@@ -95,7 +107,7 @@ input[type=radio]+label {
    border:2px solid transparent;
 }
 
-/*** Interactivité ***/
+/*** Interactivité des boutons radio***/
 [type=radio]:hover+label { 
    cursor: pointer;
 }
@@ -105,6 +117,27 @@ input[type=radio]+label {
 }
 [type=radio]:checked+label { 
    border:2px solid #068221;
+}
+
+/** Mettre des tonalités de gris sur les images à survoler */
+[type=radio]:hover+label img,
+[type=radio]:focus+label img { 
+   filter:grayscale(0);
+}
+
+[type=radio]+label img { 
+   filter:grayscale(1);
+}
+
+/*** Interactivité des boutons input***/
+.date input {
+   padding: 0.85rem;
+}
+
+/* Interactivité générale */
+
+:focus {
+   outline: green auto 10px;
 }
 
 /**** Screen Reader ***/
@@ -126,7 +159,7 @@ button{
 }
 button:hover,
 button:focus{
-   background-color: #dfce99;
+   background-color:    lightgreen;
 }
 
 /*** Erreurs ***/

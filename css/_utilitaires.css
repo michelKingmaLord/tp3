@@ -24,6 +24,7 @@ html {
 /*** Fluidifier les images ***/
 img{
     max-width: 100%;
+    display: block;
 }
 
 /** Accessibilité
