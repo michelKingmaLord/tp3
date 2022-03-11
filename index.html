@@ -232,10 +232,11 @@
                         </p>
                     </div>
                     <p class="message-erreur">
-                        <span>Message Erreur
+                        <span>
                             <span class="screen-reader-only">Avertissement </span>
                             <span class="icone icone--avertissement" aria-hidden="true"> </span>
                         </span>
+                        Message à inscrire ici.
                     </p>
                 </fieldset>
             </fieldset>
@@ -247,7 +248,7 @@
                     <h2 class="h2">Question du jour</h2>
                 </legend>
                 <fieldset class="date ctnValidation">
-                    <legend id="question_du_jour--date--legend">Date à laquelle la question à été posée?</legend>
+                    <legend class="h4">Date à laquelle la question à été posée?</legend>
                     <div class="rangee">
                         <p class="cols_4_de_12">
                             <label for="jour" class="question_du_jour--date--jour--label">Jour</label>
@@ -277,7 +278,7 @@
                         <p class="cols_4_de_12">
                             <label for="annee" class="date--annee--label">Année</label>
                             <input type="number" placeholder="" class="date--annee--input" name="annee" min="0"
-                                max="3000" id="annee" required>
+                                max="2100" id="annee" required>
                         </p>
 
                         <p class="message-erreur">
@@ -291,59 +292,55 @@
 
                 <!-- Section Monuments-->
                 <fieldset class="monument_mausolee ctnValidation">
-                    <legend id="monument_mausolee--legend">Lequel de ces monuments est un mausolée?</legend required>
+                    <legend class="h4">Lequel de ces monuments est un mausolée?</legend>
+                    <ul class="rangee">
+                        <li class="cols_4_de_12">
+                            <input name="monument_mausolee" id="monument_mausolee-0" value="chateau_dif" type="radio"
+                                class="screen-reader-only" required>
+                            <label for="If">
+                                <picture class="picture__chateaudIf">
+                                    <source srcset="images/chateaudIf-small.jpg" media="(max-width:599px)">
+                                    <source srcset="images/chateaudIf.jpg" media="(min-width:600px)">
+                                    <img class="picture__img" src="images/chateaudIf.jpg" alt="Le château d'If">
+                                </picture>
+                                <span>Le château d'If</span>
+                            </label>
+                        </li>
 
-                    <div class="monument_mausolee">
-                        <label for="monument_mausolee" class="monument_mausolee--label">
-                            <ul class="rangee">
-                                <li class="cols_4_de_12">
-                                    <label for="If">
-                                        <input name="monument_mausolee" id="monument_mausolee-0" value="chateau_dif"
-                                            type="radio">
-                                        <picture class="picture__chateaudIf">
-                                            <source srcset="images/chateaudIf-small.jpg" media="(max-width:599px)">
-                                            <source srcset="images/chateaudIf.jpg" media="(min-width:600px)">
-                                            <img class="picture__img" src="images/chateaudIf.jpg" alt="Le château d'If">
-                                        </picture>
-                                        <span>Le château d'If</span>
-                                    </label>
-                                </li>
+                        <li class="cols_4_de_12">
+                            <input name="monument_mausolee" id="monument_mausolee-1" value="palais_lux" type="radio"
+                                class="screen-reader-only" required>
+                            <label for="Luxembourg">
+                                <picture class="picture__palaisLux">
+                                    <source srcset="images/palaisluxembourg-small.jpg" media="(max-width:599px)">
+                                    <source srcset="images/palaisluxembourg.jpg" media="(min-width:600px)">
+                                    <img class="picture__img" src="images/palaisluxembourg.jpg"
+                                        alt="Le palais du Luxembourg">
+                                </picture>
+                                <span>Le palais du Luxembourg</span>
+                            </label>
+                        </li>
 
-                                <li class="cols_4_de_12">
-                                    <label for="Luxembourg">
-                                        <input name="monument_mausolee" id="monument_mausolee-1" value="palais_lux"
-                                            type="radio">
-                                        <picture class="picture__palaisLux">
-                                            <source srcset="images/palaisluxembourg-small.jpg"
-                                                media="(max-width:599px)">
-                                            <source srcset="images/palaisluxembourg.jpg" media="(min-width:600px)">
-                                            <img class="picture__img" src="images/palaisluxembourg.jpg"
-                                                alt="Le palais du Luxembourg">
-                                        </picture>
-                                        <span>Le palais du Luxembourg</span>
-                                    </label>
-                                </li>
+                        <li class="cols_4_de_12">
+                            <input name="monument_mausolee" id="monument_mausolee-2" value="taj_mahal" type="radio"
+                                class="screen-reader-only" required>
+                            <label for="taj_Mahal">
+                                <picture class="picture__palaisLux">
+                                    <source srcset="images/tajmahal-small.jpg" media="(max-width:599px)">
+                                    <source srcset="images/tajmahal.jpg" media="(min-width:600px)">
+                                    <img class="picture__img" src="images/tajmahal.jpg" alt="Le Taf Mahal">
+                                </picture>
+                                <span>Le Taj Mahal</span>
+                            </label>
+                        </li>
 
-                                <li class="cols_4_de_12">
-                                    <label for="taj_Mahal">
-                                        <input name="monument_mausolee" id="monument_mausolee-2" value="taj_mahal"
-                                            type="radio">
-                                        <picture class="picture__palaisLux">
-                                            <source srcset="images/tajmahal-small.jpg" media="(max-width:599px)">
-                                            <source srcset="images/tajmahal.jpg" media="(min-width:600px)">
-                                            <img class="picture__img" src="images/tajmahal.jpg" alt="Le Taf Mahal">
-                                        </picture>
-                                        <span>Le Taj Mahal</span>
-                                    </label>
-                                </li>
+                        <p class="message-erreur">
+                            <span>Message Erreur
+                                <span class="screen-reader-only">Avertissement </span>
+                                <span class="icone icone--avertissement" aria-hidden="true"> </span>
+                            </span>
+                        </p>
 
-                                <p class="message-erreur">
-                                    <span>Message Erreur
-                                        <span class="screen-reader-only">Avertissement </span>
-                                        <span class="icone icone--avertissement" aria-hidden="true"> </span>
-                                    </span>
-                                </p>
-                    </div>
                 </fieldset>
             </fieldset>
             </div>
