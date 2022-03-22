@@ -9,11 +9,13 @@
     <meta name="keywords" content="tp3">
     <meta name="michel kingma lord" content="Michel Kingma-Lord">
     <title>Concours un Voyage de rêve - TP3</title>
-    <link href="/css/styles.css" rel="stylesheet" type="text/css" media="all">
-    <link rel="icon" href="/favicon.ico" />
+<!--    dans href: ne pas mettre / devant nom dossier au même niveau -->
+    <link href="css/styles.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="icon" href="favicon.ico" />
 </head>
 
 <body id="body" class="">
+    <!-- Banderole -->
     <header class="conteneur entente" role="banner">
         <picture class="picture__entete">
             <source srcset="images/bandeau_600.jpg" media="(max-width:599px)">
@@ -26,7 +28,6 @@
     </header>
 
     <main class="conteneur rangee" role="main">
-        <!-- Banderole -->
         <h1 class="titre">Concours</h1>
         <aside class="introduction cols_4_de_12" role="complementary">
             <p>Complétez le coupon de participation et répondez à la question du jour
@@ -103,7 +104,7 @@
                     <p>
                         <label for="pays">Pays</label>
                         <select name="pays" id="pays" required>
-                            <option disabled="null" selected="null" value="">Choisir une option</option>
+                            <option value>Choisir une option</option>
                             <optgroup label="Canada">
                                 <option value="AB">Alberta</option>
                                 <option value="BC">British Columbia</option>
@@ -258,8 +259,9 @@
 
                         <p class="cols_4_de_12">
                             <label for="mois" class="question_du_jour--mois--label">Mois</label>
-                            <select type="text" class="question_du_jour--mois--select" name="mois" id="mois" required>
-                                <option disabled="null" selected="null">Sélectionner</option>
+<!--                        <select type="text" class="question_du_jour&#45;&#45;mois&#45;&#45;select" name="mois" id="mois" required>-->
+                            <select class="question_du_jour--mois--select" name="mois" id="mois" required>
+                                <option value>Sélectionner</option>
                                 <option value="JAN" id="mois-0">Janvier</option>
                                 <option value="FEV" id="mois-1">Février</option>
                                 <option value="MAR" id="mois-2">Mars</option>
@@ -333,7 +335,7 @@
                                 <span>Le Taj Mahal</span>
                             </label>
                         </li>
-
+                    </ul> <!-- il manquait la fermeture de la liste -->
                         <p class="message-erreur">
                             <span>Message Erreur
                                 <span class="screen-reader-only">Avertissement </span>
@@ -343,7 +345,7 @@
 
                 </fieldset>
             </fieldset>
-            </div>
+<!--            </div>-->
 
 
             <!-- Section Acceptation des règles et documentation-->
@@ -352,9 +354,10 @@
                 <!-- Section Acceptation des règlement du concours-->
                 <div class="acceptation_reglement_checkbox">
                     <p>
+                        <label for="acceptation_reglement">
                         <input name="acceptation_reglement" id="acceptation_reglement" value="acceptation_reglement"
                             type="checkbox" required>
-                        <label for="acceptation_reglement">J'ai lu et j'accepte le <a
+                        J'ai lu et j'accepte le <a
                                 href="pdf/Reglements-Voyage-De-Reve-Au-Menu.pdf" target="_blank">règlement du
                                 concours</a>
                             et je confirme avoir atteint l'âge de majorité dans ma province de
@@ -372,9 +375,10 @@
                 <!-- Section Reception documentation -->
                 <div class="acceptation_documentation_checkbox">
                     <p>
-                        <input name="documentation" id="acceptation_reception_documentation"
+                        <label for="acceptation_reception_documentation">
+                            <input name="documentation" id="acceptation_reception_documentation"
                             value="acceptation_reception_documentation" type="checkbox">
-                        <label for="acceptation_reception_documentation">Oui, j'accepte de recevoir de la
+                        Oui, j'accepte de recevoir de la
                             documentation de Radio- Canada</label>
                     </p>
 
